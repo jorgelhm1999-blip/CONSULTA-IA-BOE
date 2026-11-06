@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Consulta Diaria BOE</title>
+  <title>BOEMI · Observatorio del BOE</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="shell">
     <header>
-      <p class="eyebrow">BOLETÍN OFICIAL DE LA COMUNIDAD DE MADRID</p>
-      <h1>Consulta Diaria BOE</h1><p>Urbanismo y tramitación territorial · Madrid y sus municipios</p>
+      <p class="eyebrow">OBSERVATORIO DEL BOLETÍN OFICIAL DEL ESTADO</p>
+      <h1><span class="brand-mark">B</span>OEMI</h1>
+      <p class="brand-subtitle">Normativa, territorio y oportunidades para proyectar con criterio.</p>
       <div id="bocmi-search-indicator" class="bocmi-search-indicator" hidden aria-hidden="true">
-        <span aria-hidden="true" style="font-size:48px">🔎</span>
+        <span aria-hidden="true" class="search-glyph">◌</span>
       </div>
     </header>
 
@@ -60,7 +61,7 @@
         <button id="historical-search" type="button">Buscar</button>
       </section>
       <label class="relevance-option" for="historical-relevance">
-        <span class="relevance-copy"><strong>Aplicar criterios de interés</strong><small>Gemini revisa los anuncios que coinciden con la palabra o el municipio y oculta empleo, régimen económico y otros temas ajenos al urbanismo. Puede tardar más y consumir cuota.</small></span>
+        <span class="relevance-copy"><strong>Aplicar criterios de BOEMI</strong><small>Gemini distingue cambios normativos, oportunidades y actuaciones territoriales de interés. Puede tardar más y consumir cuota.</small></span>
         <span class="switch-control"><input id="historical-relevance" type="checkbox" role="switch" checked aria-label="Aplicar criterios de interés de la consulta diaria"><span class="switch-track" aria-hidden="true"></span></span>
       </label>
       <div id="calendar-popover" class="calendar-popover" hidden>
