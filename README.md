@@ -1,6 +1,6 @@
 # BOEMI · Observatorio del BOE
 
-Aplicación independiente basada en Bocmi. Incluye consulta diaria, búsqueda literal por periodo, calendario, filtro opcional por municipio, clasificación con Gemini, resultados principales y complementarios, progreso, reintentos y caché separada.
+Aplicación independiente basada en Bocmi. Incluye consulta semanal (lunes a viernes, o hasta el día actual si la semana está en curso), búsqueda literal por periodo, calendario, filtro opcional por municipio, clasificación con Gemini, resultados principales y complementarios, progreso, reintentos y caché separada.
 
 ## Vercel
 - Project Name: `consulta-boe`
