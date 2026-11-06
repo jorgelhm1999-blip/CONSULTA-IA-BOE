@@ -1,4 +1,4 @@
-# Consulta Diaria BOE
+# BOEMI · Observatorio del BOE
 
 Aplicación independiente basada en Bocmi. Incluye consulta diaria, búsqueda literal por periodo, calendario, filtro opcional por municipio, clasificación con Gemini, resultados principales y complementarios, progreso, reintentos y caché separada.
 
@@ -14,7 +14,7 @@ Sumario oficial JSON: `https://www.boe.es/datosabiertos/api/boe/sumario/AAAAMMDD
 Se admiten BOE-A y BOE-B; se comprueba la pertenencia al sumario del día. No se incluye BORME ni los tablones de notificaciones o edictos judiciales.
 
 ## Criterios
-Se conserva el criterio editorial actual de Bocmi: urbanismo, gestión y tramitación territorial y ambiental, excluyendo empleo y contratación rutinaria. Se conserva Madrid y sus municipios, incluyendo normativa estatal aplicable. Los resultados se deciden leyendo el texto completo, sin trasladar las secciones autonómicas del BOCM al BOE.
+BOEMI clasifica cambios estatales de normativa técnica, suelo y vivienda, medio ambiente y agua, procedimiento, financiación accesible, actuaciones territoriales en Madrid y criterios jurídicos de efecto general. Distingue impacto directo (principal) y contexto útil (complementario), comprueba destinatarios, ámbito, estado del procedimiento y plazos, y excluye empleo y trámites rutinarios. Los resultados se deciden leyendo el texto completo.
 
 ## Comprobaciones
 `npm ci` y `node --test test/*.test.js`.
