@@ -1,22 +1,23 @@
-# Consulta IA BOE
+# Consulta Diaria BOE
 
-Proyecto independiente de Bocmi para consultar el Boletín Oficial del Estado.
+Aplicación independiente basada en Bocmi. Incluye consulta diaria, búsqueda literal por periodo, calendario, filtro opcional por municipio, clasificación con Gemini, resultados principales y complementarios, progreso, reintentos y caché separada.
 
-## Estado
-
-Repositorio inicializado. La página inicial indica que la adaptación está en preparación; todavía no realiza búsquedas ni análisis de IA.
-
-## Despliegue inicial en Vercel
-
+## Vercel
 - Project Name: `consulta-boe`
-- Application Preset: `Other`
+- Preset: `Other`
 - Root Directory: `./`
-- No configurar comandos de compilación ni variables para esta página inicial.
+- Añadir `GEMINI_API_KEY` como variable del servidor y volver a desplegar. Los modelos opcionales `GEMINI_MODEL` y `GEMINI_FALLBACK_MODEL` pueden configurarse como en Bocmi.
+- No introducir claves en archivos públicos ni en el navegador.
 
-## Reutilización prevista
+## Fuente
+Sumario oficial JSON: `https://www.boe.es/datosabiertos/api/boe/sumario/AAAAMMDD`. Textos XML: `https://www.boe.es/diario_boe/xml.php?id=IDENTIFICADOR`.
+Se admiten BOE-A y BOE-B; se comprueba la pertenencia al sumario del día. No se incluye BORME ni los tablones de notificaciones o edictos judiciales.
 
-Origen de referencia: `jorgelhm1999-blip/CONSULTA-IA-GEMINI-BOCM`, directorio `consulta-bocm-gemini-v7`.
+## Criterios
+Se conserva el criterio editorial actual de Bocmi: urbanismo, gestión y tramitación territorial y ambiental, excluyendo empleo y contratación rutinaria. Se conserva Madrid y sus municipios, incluyendo normativa estatal aplicable. Los resultados se deciden leyendo el texto completo, sin trasladar las secciones autonómicas del BOCM al BOE.
 
-Se reutilizarán los componentes adecuados de interfaz, selección de fechas, progreso y análisis. Es necesario adaptar la obtención de sumarios y documentos, sus identificadores y los filtros al BOE. No basta con sustituir las siglas.
+## Comprobaciones
+`npm ci` y `node --test test/*.test.js`.
+La conexión a Gemini requiere una clave y debe validarse en el despliegue. No se han habilitado envíos de correo ni tareas programadas.
 
-El repositorio y despliegue de Bocmi se mantienen independientes. Este proyecto deberá utilizar configuración y almacenamiento separados. No se han activado correos ni tareas programadas.
+Los nombres internos de algunos módulos conservan “bocm” para mantener los contratos de la base reutilizada. Todas las descargas de boletines se dirigen al BOE y la caché usa un espacio propio.
